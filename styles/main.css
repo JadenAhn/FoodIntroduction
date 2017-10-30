@@ -1,0 +1,328 @@
+/*Google font import*/
+@import url('http://fonts.googleapis.com/css?family=ABeeZee');
+@import url('http://fonts.googleapis.com/css?family=Amaranth');
+@import url('http://fonts.googleapis.com/css?family=Caesar Dressing');
+@import url('http://fonts.googleapis.com/css?family=Caveat');
+
+*{
+	/* Universal reset: */
+	margin:0;
+	padding:0;
+}
+
+header,footer,
+article,section,
+hgroup,nav,
+figure{
+	/* Giving a display value to the HTML5 rendered elements: */
+	display:block;
+}
+
+body{
+	/* Setting the default text color, size, page background and a font stack: */
+	font-size:0.825em;
+	color:#fcfcfc;
+	background: #D7CEC7; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #D7CEC7 , white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #D7CEC7, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #D7CEC7, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #D7CEC7, white); /* Standard syntax */
+	font-family:"ABeeZee", Verdana, Arial, Helvetica, sans-serif;
+}
+
+/*Main logo and video style*/
+#main-logo {
+    width: 100%;
+    background-image: url("../images/logo_small.png");
+    background-position: center;
+		background-size: contain;
+		/*Scale the image to the largest size such that both its width and its height can fit inside the content area*/
+
+		background-repeat: no-repeat;
+    height: 20vh; /*The size of the logo*/
+    position: absolute;
+    margin: auto;
+}
+
+@media (min-width: 480px){
+  #main-logo {
+      background-image: url("../images/logo_big.png");
+      margin-top: 0;
+			height: 35vh;
+  }
+}
+
+@media (min-width: 800px){
+  #main-logo {
+      background-image: url("../images/logo_big.png");
+      margin-top: 10vh;
+			height: 35vh;
+  }
+}
+
+@media (min-width: 1000px){
+  #main-logo {
+      background-image: url("../images/logo_big.png");
+      margin-top: 15vh;
+			height: 50vh;
+  }
+}
+
+.fullscreen-bg_video {
+    width: 100%;
+}
+
+/* Hyperlink Styles: */
+
+a, a:visited {
+	color:#D7CEC7;
+	text-decoration:none;
+	outline:none;
+}
+
+a:hover{
+	font-weight: bolder;
+	color:#FFFFFF;
+}
+
+a img{
+	border:none;
+}
+
+h3 a, h3 a:visited {
+	font-weight: normal;
+	font-size: 0.9em;
+	color:#FFFFFF;
+}
+h3 a:hover{
+	color:#C09F80;
+	font-weight: bolder;
+}
+
+/* Headings: */
+
+h1,h2,h3{
+	font-family:"Amaranth",Helvetica,Arial,Sans-Serif;
+	text-shadow:0 1px 1px #565656;
+}
+
+h1{
+	/* The logo text */
+	font-size:3em;
+	/*padding:0.5em 0 0;*/
+	margin-bottom: 0;
+	text-transform:uppercase;
+	color: #76323F
+}
+
+h3{
+	/* The slogan text */
+	font-family:"Caveat",Helvetica,Arial,Sans-Serif;
+	font-size:2em;
+	font-weight: bold;
+	/*margin:0 0 1em;*/
+}
+
+h2{
+	font-family:"Caesar Dressing",Helvetica,Arial,Sans-Serif;
+	font-size:2.2em;
+	font-weight:normal;
+	letter-spacing:0.01em;
+	text-transform:uppercase;
+}
+
+.go_up {
+	float: right;
+	padding-right: 15px;
+}
+
+p{
+	line-height:1.5em;
+	padding-bottom:1em;
+}
+.pbold{
+color: #D7CEC7;
+	font-size:1.2em;
+	font-weight:bold;
+	letter-spacing:0.01em;
+	text-transform:uppercase;
+}
+
+.line{
+	/* The dividing line: */
+	height:1px;
+	background-color:#565656;
+	border-bottom:1px solid #565656;
+	margin:1em 0;
+	overflow:hidden;
+}
+
+article .line{
+	/* The dividing line inside of the article is darker: */
+	background-color:#C09F80;
+	border-bottom-color:#204656;
+	margin:1.3em 0;
+}
+
+footer .line{
+	margin:2em 0;
+}
+
+nav{
+	font-family:"Caesar Dressing",Helvetica,Arial,Sans-Serif;
+	background:url(../images/gradient_light.jpg) repeat-x 50% 50% #f8f8f8;
+	padding:0 3px;
+	position: fixed;
+	float: right;
+	right:0;
+	top:2em;
+	border:10px solid #000000;
+	-moz-box-shadow:0 1px 1px #565656;
+	-webkit-box-shadow:0 1px 1px #565656;
+	box-shadow:0 1px 1px #565656;
+}
+
+/* The clearfix hack to clear the floats: */
+
+.clear:after{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* The navigation styling: */
+
+nav ul li{
+	display:inline;
+}
+
+nav ul li a,
+nav ul li a:visited{
+	color:#FFFFFF;
+	display:block;
+	float:left;
+	font-size:1.1em;
+	margin:5px 2px;
+	padding:7px 10px 4px;
+	/*text-shadow:0 1px 1px #565656;*/
+	text-transform:uppercase;
+}
+
+nav ul li a:hover{
+	text-decoration:none;
+	background-color:#f0f0f0;
+	color:#565656;
+}
+
+nav, article, nav ul li a,figure{
+	/* Applying CSS3 rounded corners: */
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+}
+
+/* Article styles: */
+
+#page{
+	width:50%;
+	margin:0 auto;
+	position:relative;
+}
+
+article{
+	background-color:#565656;
+	margin:3em 0;
+	padding:20px;
+	text-shadow:0 2px 0 black;
+}
+
+#twocolumn{
+	-moz-column-count: 2;
+	-webkit-column-count: 2;
+	column-count: 2;
+	-moz—column—gap: 35px;
+	-webkit—column—gap: 35px;
+	column-column-gap: 35px;
+	-moz-column-rule: 2px solid black;
+	-webkit—column—rule: 2px solid black;
+	column—rule: 2px solid black;
+}
+
+#threecolumn{
+	-moz-column-count: 3;
+	-webkit-column-count: 3;
+	column-count: 3;
+	-moz—column—gap: 35px;
+	-webkit—column—gap: 35px;
+	column-column-gap: 35px;
+	-moz-column-rule: 2px solid black;
+	-webkit—column—rule: 2px solid black;
+	column—rule: 2px solid black;
+}
+
+figure{
+	border:3px solid #D7CEC7;
+	float:right;
+	width:500px;
+	height:300px;
+	margin-left:15px;
+	overflow:hidden;
+
+}
+
+figure:hover{
+	-moz-box-shadow:0 0 5px #C09F80;
+	-webkit-box-shadow:0 0 5px #C09F80;
+	box-shadow:0 0 5px #C09F80;
+}
+
+/*Change the image size of the files in the pages folder*/
+.pageimg{
+	width:300px;
+}
+.pageimg:hover{
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	box-shadow: none;
+}
+
+
+/* Footer styling: */
+
+footer{
+	margin-bottom:30px;
+	text-align:center;
+	font-size:0.825em;
+}
+
+
+footer p{
+	margin-bottom:-2.5em;
+	position:relative;
+	color: #565656;
+}
+
+footer a,footer a:visited{
+	color:#565656;
+	/*background-color:#213e4a;*/
+	display:block;
+	padding:2px 4px;
+	z-index:100;
+	position:relative;
+}
+
+footer a:hover{
+	text-decoration:none;
+	/*background-color:#142830;*/
+}
+
+footer a.by{
+	float:left;
+
+}
+
+footer a.up{
+	float:right;
+}
